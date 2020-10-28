@@ -8,7 +8,7 @@ Test producer topic test publish message1
     log    ${MSG}
     Log to console   ${MSG}
 
-Test consumer topic test publish message1
+Test consumer topic test subscribe message1
     ${MSG} =     Subscribe  10.138.38.65:9092   topicTest
     log    ${MSG}
     Log to console   ${MSG}
