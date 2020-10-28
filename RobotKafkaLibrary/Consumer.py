@@ -8,3 +8,4 @@ def Subcribe(broker,topic,timeout=3000):
     for message in (consumer):
         consumer.commit()
         return (message[6].decode("utf-8"))
+    return 'err'
