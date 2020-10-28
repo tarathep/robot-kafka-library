@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="robot-kafka-library",
-    version="0.0.3",
+    version="0.0.4",
     author="tarathep",
     author_email="bokie.tarathep@gmail.com",
     description="robotframework exetension lib for test kafka",
