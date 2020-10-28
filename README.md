@@ -18,8 +18,12 @@ Test producer topic test publish message1
     log    ${RESULT}
     Log to console   ${RESULT}
 
-Test consumer topic test publish message1
+Test consumer topic test subscribe message1
     ${MSG} =     Subscribe  {broker-ip}:{port}   {topic}   {option-timeout}
     log    ${MSG}
     Log to console   ${MSG}
-    ```
+ ```
+
+## Example Result
+ ![alt text](https://raw.githubusercontent.com/tarathep/robot-kafka-library/master/capture.jpg)
+ 
