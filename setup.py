@@ -1,24 +1,25 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
-def readme():
-    with open('README.md') as f:
-        return f.read()
+with open("README.md", "r") as fh:
+    long_description = fh.read()
 
-setup(name='robot-kafka-library',
-    version='0.1',
-    description='for test message from kafka with robot framework',
-    long_description=readme(),
-    url='https://github.com/tarathep/robot-kafka-library',
-    author='Tarathep',
-    author_email='bokie.tarathep@gmail.com',
-    license='Tarathep',
+setup(
+    name="robot-kafka-library",
+    version="0.0.3",
+    author="tarathep",
+    author_email="bokie.tarathep@gmail.com",
+    description="robotframework exetension lib for test kafka",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/tarathep/robot-kafka-library",
+    license="MIT",
+    packages=find_packages(),
+    package_dir={'robotKafkaLibrary': 'RobotKafkaLibrary'},
     install_requires=[
         'kafka-python'
     ],
-    scripts=['bin/grandmasomsri-status'],
-    keywords='robot-fafka-library',
-    packages=['robot-kafka-library'],
-    package_dir={'robot-kafka-library': 'src/robot-kafka-library'},
-    package_data={'robot-kafka-library': ['graph/*.py']
-    },
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License"
+    ]
 )
